@@ -1,0 +1,201 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyPYvUkW95wwLD+Viz04RZoL",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/jattodaniel/test/blob/main/Intro_pythonipynb\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "collapsed": true,
+        "id": "6tlYTg5dbk41",
+        "outputId": "841b66bd-7293-4d7b-958c-81b326e5a32a"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter value for Area(a*) :12\n",
+            "Enter value for gas constant(R) :15\n",
+            "Enter value for Temperature(To) :30\n",
+            "Enter value for pressure (P):23\n",
+            "m_max is: 8.908470640643094\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "from math import sqrt\n",
+        "a = eval(input(\"Enter value for Area(a*) :\"))\n",
+        "r = eval(input(\"Enter value for gas constant(R) :\"))\n",
+        "to = eval(input(\"Enter value for Temperature(To) :\"))\n",
+        "p = eval(input(\"Enter value for pressure (P):\"))\n",
+        "m_max = 0.6847*p*a/sqrt(r*to)\n",
+        "print(\"m_max is:\", m_max)"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#taking input from the user\n",
+        "name = input(\"Enter your name:\")\n",
+        "age = int(input(\"Enter your age:\")) #convert I put to integer\n",
+        "\n",
+        "#output\n",
+        "print(f\"Hello {name}, you are {age} years old!\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yxiMN5tYuDv_",
+        "outputId": "9b5d588e-9054-4a6c-b73f-6cc0106d69cf"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter your name:Zedd\n",
+            "Enter your age:570\n",
+            "Hello Zedd, you are 570 years old!\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#if-else example\n",
+        "speed = eval(input(\"Enter the speed of the car:\"))\n",
+        "\n",
+        "if speed >= 100:\n",
+        "    print(\"Overspeeding\")\n",
+        "    speed = speed - 20\n",
+        "elif speed >= 80:\n",
+        "    print(\"Speeding\")\n",
+        "elif speed >= 70:\n",
+        "    print(\"Normal\")\n",
+        "else:\n",
+        "    print(\"Slow or Stationary\")\n",
+        "print(f\"Your new speed is {speed}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Ov7-heKt2fcf",
+        "outputId": "0b1485ed-aa4f-4f6d-91b2-9b2306d62e23"
+      },
+      "execution_count": 3,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the speed of the car:80\n",
+            "Speeding\n",
+            "Your new speed is 80\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#define a variable for an engineering constant\n",
+        "speed_of_light = 343 #m/s @ 20C\n",
+        "\n",
+        "#calculate the time for sound to travel 100 metres:\n",
+        "distance = eval(input(\"Enter the distance in metres: \"))\n",
+        "time = distance/speed_of_light\n",
+        "\n",
+        "print(f\"Time for sound to travel 100 meters: {time:.2f}\")\n",
+        "print(f\"Time for sound to travel 100 meters: {time: .4f}\")\n",
+        "print(f\"Time for sound to travel 100 meters: {time: .6f}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "YklVhpugw2u8",
+        "outputId": "03c2a76e-5e31-47d3-a806-644f05b86d8b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the distance in metres: 100\n",
+            "Time for sound to travel 100 meters: 0.29\n",
+            "Time for sound to travel 100 meters:  0.2915\n",
+            "Time for sound to travel 100 meters:  0.291545\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#using a for loop\n",
+        "for i in range(1, 11):\n",
+        "    print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "KjdGPIIm4IFJ",
+        "outputId": "a7b285ce-7f80-4d79-9b5c-9b61f3f4226b"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
